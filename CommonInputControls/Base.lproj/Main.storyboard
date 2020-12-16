@@ -53,7 +53,11 @@
                             </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <gestureRecognizers/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Npr-Ma-g2u" appends="YES" id="mGI-EM-d9d"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="slider" destination="aMv-ue-w90" id="Qg1-qz-RWp"/>
@@ -61,6 +65,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Npr-Ma-g2u">
+                    <connections>
+                        <action selector="respondToTapGesture:" destination="BYZ-38-t0r" id="kP6-Qg-OIf"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="126.5625"/>
         </scene>

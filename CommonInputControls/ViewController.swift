@@ -45,5 +45,9 @@ class ViewController: UIViewController {
         }
     }
     
+    @IBAction func respondToTapGesture(_ sender: UITapGestureRecognizer) {
+        let location = sender.location(in: view)
+        print(location)
+    }
 }
 
