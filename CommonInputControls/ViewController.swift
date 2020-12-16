@@ -10,11 +10,22 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func buttonTapped(_ sender: Any) {
+        print("Button is tapped!")
+    }
+    @IBAction func swichOnOff(_ sender: UISwitch) {
+        if sender.isOn {
+            print("Swich is ON!")
+        } else {
+            print("Swich is OFF!")
+        }
+    }
+    
 }
 
