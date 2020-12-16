@@ -12,12 +12,18 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var toggle: UISwitch!
     @IBOutlet weak var slider: UISlider!
+    @IBOutlet weak var labelPlaceHolder: UILabel!
+    @IBOutlet weak var textFieldForPlaceHolder: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        button.addTarget(self, action: #selector(buttonTapped(_:)), for: .touchUpInside)
     }
-
+    // Connect IBO и creat method in viewDidLoad
+    @IBOutlet weak var button: UIButton!
+    
+// Отключен IBA
     @IBAction func buttonTapped(_ sender: UIButton) {
         print("Button is tapped!")
         if toggle.isOn {
@@ -49,5 +55,18 @@ class ViewController: UIViewController {
         let location = sender.location(in: view)
         print(location)
     }
+    
+    @IBAction func setTextButtonTapped(_ sender: UIButton) {
+        print("Button is tapped!")
+        labelPlaceHolder.text = textFieldForPlaceHolder.text
+    }
+    
+    @IBAction func clearTextButtonTapped(_ sender: UIButton) {
+        print("Button is tapped!")
+        textFieldForPlaceHolder.text = ""
+        labelPlaceHolder.text = ""
+        
+    }
+    
 }
 

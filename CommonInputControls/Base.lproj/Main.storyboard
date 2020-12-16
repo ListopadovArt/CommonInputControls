@@ -24,9 +24,6 @@
                                 <state key="normal" title="Click here!">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
-                                <connections>
-                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vka-7h-AeF"/>
-                                </connections>
                             </button>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="8Kt-Ju-MAC">
                                 <rect key="frame" x="183" y="433" width="51" height="31"/>
@@ -42,8 +39,8 @@
                                     <action selector="sliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="FQu-gW-KjD"/>
                                 </connections>
                             </slider>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5vk-ti-abM">
-                                <rect key="frame" x="143" y="298" width="129" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Enter text to display in the label below" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5vk-ti-abM">
+                                <rect key="frame" x="39" y="197" width="337" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -51,6 +48,37 @@
                                     <action selector="keyboardReturnKeyTapped:" destination="BYZ-38-t0r" eventType="editingChanged" id="i1m-aO-CtB"/>
                                 </connections>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RUB-uM-N3g">
+                                <rect key="frame" x="39" y="256" width="139" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Set Text">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="setTextButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aXf-oi-cvD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jFy-Ld-BZB">
+                                <rect key="frame" x="237" y="256" width="139" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Clear Text">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="clearTextButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EqB-Kb-7Kh"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Placeholder" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ps5-kc-WjT">
+                                <rect key="frame" x="39" y="587" width="337" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <gestureRecognizers/>
@@ -60,7 +88,10 @@
                         </connections>
                     </view>
                     <connections>
+                        <outlet property="button" destination="pde-yw-c16" id="g0w-rd-Ez2"/>
+                        <outlet property="labelPlaceHolder" destination="ps5-kc-WjT" id="hE0-PL-wFq"/>
                         <outlet property="slider" destination="aMv-ue-w90" id="Qg1-qz-RWp"/>
+                        <outlet property="textFieldForPlaceHolder" destination="5vk-ti-abM" id="uPq-Dt-T2R"/>
                         <outlet property="toggle" destination="8Kt-Ju-MAC" id="pUe-jM-L7M"/>
                     </connections>
                 </viewController>
